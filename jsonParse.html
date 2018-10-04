@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JSON parse</h2>
+
+<p id="demo"></p>
+
+<script>
+var info = '{"name":"Miley", "age":10, "faves":"purple and pizza"}'
+var obj = JSON.parse(info);
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age + ", " + obj.faves;
+</script>
+
+</body>
+</html>
