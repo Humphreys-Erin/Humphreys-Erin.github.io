@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+div#box1 {
+	background: blue;
+	width: 400px;
+	height: 200px;
+}
+</style>
+<script>
+function slideClosed(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "height 0.5s linear 0s"; 
+	elem.style.height = "200px";	
+}
+function slideOpen(el){
+	var elem = document.getElementById(el);
+	elem.style.transition = "height 0.5s linear 0s"; 
+	elem.style.height = "0px";
+}
+</script>
+</head>
+<body>
+<button onclick="slideClosed('box1');">Click for slide closed</button>
+<button onclick="slideOpen('box1');">Click for slide open</button>
+<div id="box1">This is my box ...</div>
+</body>
+</html>
