@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--style element for css-->
+<style type="text/css">
+div#box1 {
+	background: blue;
+	width: 350px;
+	height: 200px;
+}
+</style>
+<!--script element for JavaScript-->
+<script>
+function changeBG(el,clr){
+	var elem = document.getElementById(el);
+	elem.style.transition = "background 1.0s linear 0s"; 
+	elem.style.background = clr;	
+}
+
+</script>
+</head>
+<body>
+<!--div element-->
+<button onclick="changeBG('box1','pink');">Click for pink</button>
+<button onclick="changeBG('box1','green');">Click for green</button>
+<button onclick="changeBG('box1','blue');">Click for blue</button>
+
+<div id="box1">This is my box that changes color ...</div>
+
+</body>
+</html>
