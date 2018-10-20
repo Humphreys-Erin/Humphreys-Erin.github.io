@@ -6,15 +6,16 @@ div#box1 {
 	background: blue;
 	width: 400px;
 	height: 200px;
+        overflow: hidden;
 }
 </style>
 <script>
-function slideClosed(el){
+function slideOpen(el){
 	var elem = document.getElementById(el);
 	elem.style.transition = "height 0.5s linear 0s"; 
 	elem.style.height = "200px";	
 }
-function slideOpen(el){
+function slideClosed(el){
 	var elem = document.getElementById(el);
 	elem.style.transition = "height 0.5s linear 0s"; 
 	elem.style.height = "0px";
