@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="TopicOne.js"></script>
+    </head>
+    <body>
+<h2>JavaScript For Loop</h2>
+<h3>Here is a list of farm animals</h3>
+
+
+
+<p id="demo"></p>
+
+<script>
+var farmAnimals = ["cows", "pigs", "chickens", "goats", "horses", "sheep", "rabbits"];
+var text = " ";
+var howLong;
+var i;
+for (i = 0, howLong = farmAnimals.length, text = " ";
+		i < howLong; i++) {
+	text += farmAnimals[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<h2>JavaScript Array</h2>
+<h3>This is my favorite farm animal</h3>
+<p id="demo"></p>
+
+<script>
+var farmAnimals = ["cows", "pigs", "chickens", "goats", "horses", "sheep", "rabbits"];
+document.getElementById("demo").innerHTML = farmAnimals[2];
+</script>
+
+<h2>JavaScript Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+var farmAnimals = ["cows", "pigs", "chickens", "goats", "horses", "sheep", "rabbits"];
+var text = " ";
+var i;
+for (i = 0; i < farmAnimals.length; i++) {
+	text += farmAnimals[i] + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+
+
+     <br><br>
+        <hr>
+        <a href="index.html">Topic List</a>
+    </body>
+</html>
