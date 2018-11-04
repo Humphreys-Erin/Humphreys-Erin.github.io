@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="myFamily.js"></script>
+		<title>Topic 2</title>
+		<h1>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h1>
+	</head>
+<body>
+
+<p id="demo">
+
+<script>
+	var child2 = new Child("Zachary", "William", 14, "boy");
+	var child4 = new Child("Miley", "Renee", 10, "girl");
+	var child5 = new Child("Charlotte", "Elizabeth", 7, "girl");
+	var child6 = new Child("Kimberly", "Alaina", 5, "girl");
+	var child7 = new Child("Jarom", "Elias", 2, "boy");
+
+	document.getElementById("demo").innerHTML = 
+	"<p>"+"My youngest son is " + child7.firstName + " " + child7.midName + ". </p>" + "<p> My youngest daughter is " + child6.firstName + " " + child6.midName +".</p>";
+</script>
+</p>	
+<p id="instantiation"> 
+          <script>
+              //W3Schools code adapted
+              //This is a new instantiation of Car Variable x inherits all traits of the object Car
+            document.getElementById("instantiation").innerHTML =
+              "<p>"+"My oldest daughter is " + x.firstName + " " + x.midName + ". This demonstrates a new instance of the Child function. </p>"; 
+          </script>
+      </p>
+      <p id="methods">
+          <script>
+              //Methods are objects that work as functions and will still work if you forget to use it as a function.
+            document.getElementById("methods").innerHTML =
+              "<p>"+"My oldest child is " + child1.Name() + ". </p>" + "<p>"+"My oldest child is " child1.Name + " This is showing the object called without the function definition of (). </p>"; 
+          </script>
+        </p>  
+       
+      
+
+
+
+
+</body>
+</html>
