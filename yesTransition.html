@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+
+<h1>Transitions</h1>
+
+<p>Examples with transition-timing-function property</p>
+
+
+
+
+</body>
+<style> 
+div {
+    width: 100px;
+    height: 25px;
+    background: pink;
+    transition: width 3s;
+}
+
+#divEase {transition-timing-function: ease;}
+#divEaseIn {transition-timing-function: ease-in;}
+#divEaseOut {transition-timing-function: ease-out;}
+#divEaseInOut {transition-timing-function: ease-in-out;}
+#divLinear {transition-timing-function: linear;}
+#divCustom {cubic-bezier(0.1, -0.6, 0.2, 0)}
+div:hover {
+    width: 250px;
+}
+
+</style>
+</head>
+<body>
+<div id="divEase">ease</div>
+slow beginning, then fast, ending slowly<br><br>
+<div id="divEaseIn">ease-in</div>
+slow beginning<br><br>
+<div id="divEaseOut">ease-out</div>
+slow ending<br><br>
+<div id="divEaseInOut">ease-in-out</div>
+slow beginning and ending<br><br>
+<div id="divLinear">linear</div>
+same pace beginning to end<br><br>
+<div id="divCustom">cubic bezier</div>
+customized speed over 4 defined points
+</body>
+</html>
