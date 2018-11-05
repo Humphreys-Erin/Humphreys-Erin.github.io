@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Object Constructors; Prototypes and Inheritance</h2>
+<p>Objects inherit properties of their prototype.</p>
+<p id="demo"></p>
+
+<script>
+
+// This is the constructor function for Child object
+function Child(first, mid, age) {
+    this.firstName = first;
+    this.midName = mid;
+    this.age = age;
+}
+
+// This is the creation of two Child objects
+var child1 = new Child("Joshua", "David", 15);
+var child2 = new Child("Zachary", "William", 14);
+
+// This displays the ages
+document.getElementById("demo").innerHTML =
+"My oldest child is " + child1.age + ". My second child is " + child2.age + "."; 
+
+</script>
+
+<p id="inherit"></p>
+
+<script>
+function Child(first, mid, age) {
+    this.firstName = first;
+    this.midName = mid;
+    this.age = age;
+}
+// Adding the new property eyeColor to the object constructor
+Child.prototype.eyeColor = "blue";
+
+var child2 = new Child("Zachary", "William", 14);
+document.getElementById("inherit").innerHTML =
+"Zachary's eyes are " + child2.eyeColor + "."; 
+</script>
+
+<p id="inherit1"></p>
+
+<script>
+function Child(first, mid, age) {
+    this.firstName = first;
+    this.midName = mid;
+    this.age = age;
+}
+// Adding a new method to the object constructor
+Child.prototype.name = function() {
+    return this.firstName + " " + this.midName
+};
+
+var child3 = new Child("Alexandra", "Sage", 12);
+document.getElementById("inherit1").innerHTML =
+"My third child is " + child3.name() + "."; 
+</script>
+
+</body>
+</html>
