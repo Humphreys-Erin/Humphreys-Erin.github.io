@@ -1,44 +1,115 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<script type="text/javascript" src="myFamily.js"></script>
-		<title>Topic 2</title>
-		<h1>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h1>
-	</head>
 <body>
 
-<p id="demo">
+<h2>JavaScript Object Creation</h2>
+<p>A collection of properties/named values defines a JavaScript object.</p><br><br>
+<p>Below is some data displayed from an object containing first and middle names and age properties:</p>
+
+<p id="demo"></p>
+<script>
+// Creating an object
+var child = {firstName:"Joshua", midName:"David", age:15};
+
+// Displaying some data from the object
+document.getElementById("demo").innerHTML = "My first child's name is " + child.firstName + " " + child.midName + ".";
+</script>
+
+<p id="object"></p>
 
 <script>
-	var child2 = new Child("Zachary", "William", 14, "boy");
-	var child4 = new Child("Miley", "Renee", 10, "girl");
-	var child5 = new Child("Charlotte", "Elizabeth", 7, "girl");
-	var child6 = new Child("Kimberly", "Alaina", 5, "girl");
-	var child7 = new Child("Jarom", "Elias", 2, "boy");
+// Creating an object
+var child2 = {firstName:"Zachary", midName:"William", age:14};
 
-	document.getElementById("demo").innerHTML = 
-	"<p>"+"My youngest son is " + child7.firstName + " " + child7.midName + ". </p>" + "<p> My youngest daughter is " + child6.firstName + " " + child6.midName +".</p>";
+// Displaying some data from the object
+document.getElementById("object").innerHTML =
+child2.firstName + " is " + child2.age + " years old.";
 </script>
-</p>	
-<p id="instantiation"> 
-          <script>
-              //W3Schools code adapted
-              //This is a new instantiation of Car Variable x inherits all traits of the object Car
-            document.getElementById("instantiation").innerHTML =
-              "<p>"+"My oldest daughter is " + x.firstName + " " + x.midName + ". This demonstrates a new instance of the Child function. </p>"; 
-          </script>
-      </p>
-      <p id="methods">
-          <script>
-              //Methods are objects that work as functions and will still work if you forget to use it as a function.
-            document.getElementById("methods").innerHTML =
-              "<p>"+"My oldest child is " + child1.Name() + ". </p>" + "<p>"+"My oldest child is " child1.Name + " This is showing the object called without the function definition of (). </p>"; 
-          </script>
-        </p>  
-       
-      
 
+
+<p id="obj create"></p>
+
+<script>
+// Creating an object
+var child3 = {
+    firstName: "Alexandra",
+    midName : "Sage",
+    fullName : function() {
+       return this.firstName + " " + this.midName;
+    }
+};
+// Displaying data from the object
+document.getElementById("obj create").innerHTML = child3.fullName();
+</script>
+<br><br>
+<p>If you access an object method without (), it will return the function definition:</p>
+
+<p id="obj create2"></p>
+
+<script>
+// Creating an object
+var child3 = {
+    firstName: "Alexandra",
+    midName : "Sage",
+    fullName : function() {
+       return this.firstName + " " + this.midName;
+    }
+};
+
+// Displaying data from the object
+document.getElementById("obj create2").innerHTML = child3.fullName;
+</script>
+<br><br>
+<p>Actions perfomed on objects are called methods:</p>
+<p id="add method"></p>
+
+<script>
+var child4 = {
+    firstName: "Miley",
+    midName : "Renee",
+    age       : 10,
+};
+child4.name = function() {
+    return this.firstName + " " + this.midName;
+};
+
+document.getElementById("add method").innerHTML =
+"My fourth child is " + child4.name(); 
+</script>
+
+<p id="getter"></p>
+
+<script>
+// Creating an object
+var child5 = {
+    firstName: "Charlotte",
+    midName: "Elizabeth",
+    age: 7,
+    get howOld() {
+       return this.age;
+    }
+};
+// Displaying data from the object using a getter
+document.getElementById("getter").innerHTML = child5.howOld;
+</script>
+
+<p id="setter"></p>
+
+<script>
+// Creating an object
+var child6 = {
+    firstName: "Kimberly",
+    midName : "Alaina",
+    age : "NO",
+    set howOld(value) {
+       this.age = value;
+    }
+};
+
+child6.howOld = 5;
+// Displaying data from the object
+document.getElementById("setter").innerHTML = child6.age;
+</script>
 
 
       <hr>
