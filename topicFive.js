@@ -5,5 +5,5 @@ function saveFarmAnimal() {
 
 function getFarmAnimal() {
     var pullData = localStorage.getItem("farmAnimal");
-    document.getElementById("data").innerHTML = "Your favorite farm animal is: " + pullData;
+    document.getElementById("data").innerHTML = "Your favorite farm animal: " + pullData;
 }
