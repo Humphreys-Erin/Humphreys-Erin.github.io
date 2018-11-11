@@ -1,47 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-	<title>weatherdata</title>
-	
-   
-   <body>
-		<h2>Using XMLHTTPRequest to Consume a JSON Web Service</h2>
-		<h3 id="welcomeMessage">Temperature request by city</h3>
-		
-		
-		
-		<p class="EnterInfo">Enter city name below and click Submit to see current temp</p>
-		<input type="text" id="city" placeholder="Atlanta"><br>
-		<br>
-		<button onClick="getCity()">Submit</button><br>
-		<p id="getWeather"></p>
-		
-		
-		
-		<script>
-		function getCity() {
-			var data = document.getElementById("city").value;
-			var api = "http://api.openweathermap.org/data/2.5/weather?q=";
-			var apiKey = "&APPID=e1a6a5ad685592c73cafa849c7a2f5c6&units=imperial";
-			var url = api.concat(data, apiKey);
-			
-			
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					var text = JSON.parse(xhttp.responseText);
-					
-					document.getElementById("getWeather").innerHTML = "The current temperature is: " + text.main.temp + "in " + data;
-				}
-			};
-			xhttp.open("GET", url, true);
-			xhttp.send();
-		}
-		</script>
-		
-	    <hr>
-       <a href="index.html">Topic List</a>
-   </body>
-</html>
+<html>
+<body>
+<h1>CIT 261</h1>
+  <br>
+
+<br>
+<a href=forLoop.html>JavaScript For Loop</a>
+<br>
+<a href=while.html>JavaScript While Loop</a>
+<br>
+<a href=conditionalStatement.html>Conditional Statement</a>
+<br>
+<a href=associativeArray.html>Associative Array</a>
+<br>
+<a href=myArray.html>Array</a>
+<br>
+<br>
+<a href=myFamily.html>Object Creation Functions</a>
+<br>
+<a href=myFamilyConstructors.html>Object Creation; Prototypes, Inheritance</a>
+<br><br>
+<a href=slide.html>Slide</a>
+<br>
+<a href=fading.html>Fading</a>
+<br>
+<a href=transition.html>Transition Triggered by Javascript</a>
+<br>
+<br>
+<a href=jsonParse.html>JSON Parse</a>
+<br>
+<a href=JSONstring.html>JSON Stringify</a>
+<br><br>
+<a href=weatherData.html>Using XMLHTTPRequest to Consume a JSON Web Service</a>
+<br><br>
+<a href=storeAnimal.html>Local Storage API</a>
+<br>
+<br>
+<a href=noTransition.html>Without Transition</a>
+<br>
+<a href=withTransition.html>CSS Transition</a>
+<br>
+<a href=yesTransition.html>CSS transition-duration-function</a>
+<br>
+</body>
 </html>
