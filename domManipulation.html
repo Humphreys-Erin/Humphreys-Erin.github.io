@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>DOM Manipulation</h1>
+<h2>Using createElement to create New Button</h2>
+<p>Click the button to make a New Button element.</p>
+
+<button id="button" onclick="myFunction()">Click to create new button</button>
+<p id="firstEx"></p>
+
+<script>
+function myFunction() {
+    var button = document.createElement("BUTTON");
+	var text = document.createTextNode("New Button")
+    button.appendChild(text);
+	document.getElementById("firstEx").appendChild(button);
+}
+</script>
+<br>
+
+<h2>Using removeChild to remove items from a list</h2>
+
+<ul id="myKids"><li>Josh</li><li>Zach</li><li>Allie</li><li>Miley</li><li>Charley</li><li>Kimmie</li><li>Jarom</li></ul>
+
+<p>Click the button to remove the first kid from the list.</p>
+
+<button onclick="myRemoveFunction()">Click to remove</button>
+
+<script>
+function myRemoveFunction() {
+    var list = document.getElementById("myKids");
+    list.removeChild(list.childNodes[0]);
+}
+</script>
+
+<br>
+<br>
+<h2>Using insertBefore to move items from one list to another</h2>
+
+<ul id="myBoys"><li>Josh</li><li>Zach</li><li>Jarom</li></ul>
+
+<ul id="myGirls"><li>Allie</li><li>Miley</li><li>Charley</li><li>Kimmie</li></ul>
+
+<p>Click the button to move a kid from one list to another</p>
+
+<button onclick="myInsertFunction()">Click to move</button>
+
+<script>
+function myInsertFunction() {
+    var node = document.getElementById("myGirls").lastChild;
+    var list = document.getElementById("myBoys");
+    list.insertBefore(node, list.childNodes[0]);
+}
+</script>
+
+
+</body>
+</html>
