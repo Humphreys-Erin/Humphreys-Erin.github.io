@@ -32,7 +32,7 @@
 				if (this.readyState == 4 && this.status == 200) {
 					var text = JSON.parse(xhttp.responseText);
 					
-					document.getElementById("getWeather").innerHTML = "The current temperature is: " + text.main.temp;
+					document.getElementById("getWeather").innerHTML = "The current temperature is: " + text.main.temp + "in " + data;
 				}
 			};
 			xhttp.open("GET", url, true);
