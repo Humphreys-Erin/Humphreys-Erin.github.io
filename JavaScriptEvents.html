@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>JavaScript Events</h1>
+</head>
+<body onload="myOnloadFunction()">
+
+<h2>onLoad event</h2>
+<p>You should have seen a popup welcoming you to your loaded page. This is an onLoad event.</p>
+
+<script>
+function myOnloadFunction() {
+    alert("Welcome to your loaded page!");
+}
+</script>
+
+<h2>onInput event</h2>
+<p>Enter your favorite farm animal and watch it appear</p>
+<input type="text" id="myAnimal" oninput="myOnInputFunction()">
+
+<p id="demo"></p>
+
+<script>
+function myOnInputFunction() {
+    var x = document.getElementById("myAnimal").value;
+    document.getElementById("demo").innerHTML = "Your favorite farm animal: " + x;
+}
+</script>
+
+<h2>onTouch event</h2>
+
+<button ontouchstart="myOnTouchFunction()">Touch this button</button>
+
+
+<p id="touch"></p>
+
+<script>
+function myOnTouchFunction() {
+  document.getElementById("touch").innerHTML = "You have used a touchscreen";
+}
+</script>
+
+<hr>
+        <a href="index.html">Topic List</a>
+    </body>
+</html>
