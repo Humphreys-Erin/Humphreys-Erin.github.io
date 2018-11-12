@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<h1>HTML5 Tags - Video, Audio, and Canvas</h1>
+</head>
+<body> 
+<h2>Video Tag</h2>
+<video width="400" controls>
+  <source src="aVideo.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<p>
+Video courtesy of 
+<a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.
+</p>
+<br>
+<h2>Audio Tag</h2>
+<audio controls>
+  <source src="anAudio.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<br>
+<br>
+<h2>Canvas Tag</h2>
+<p>Canvas is a container that when used with a script can be interactive. My example simply contains a circle.</p>
+<canvas id="myCanvas" width="300" height="200"
+style="border:3px solid purple;">
+</canvas>
+
+<script>
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+
+</script>
+
+
+<hr>
+        <a href="index.html">Topic List</a>
+    </body>
+</html>
+
