@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Manipulating CSS</title>
+
+<script type="text/javascript">
+
+function changeBackground(element) {
+  element.style.background = 'pink';
+}
+
+function resetBackground(elementId) {
+  element = document.getElementById(elementId);
+  element.style.background = 'white';
+}
+</script>
+
+<style type="text/css">
+#myChange {
+  border: solid purple 3px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Manipulating CSS Class Properties Using JavaScript</h2>
+<p id="myChange" onclick="changeBackground(this);">
+ Click here to change background color.
+</p>
+
+
+<button onclick="resetBackground('myChange');">Click here to return original</button>
+
+<hr>
+       <a href="index.html">Topic List</a>
+   </body>
+</html> 
