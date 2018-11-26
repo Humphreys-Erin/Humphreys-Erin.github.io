@@ -1,0 +1,115 @@
+
+<!--Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries-->
+<!--Designing, Defining, and Triggering CSS3 Animations without Custom Libraries-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Topics 12 and 13</title>
+    <style>
+       
+        #noTransform {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+            
+        }
+
+        #rotate {
+            
+            width: 100px;
+			height: 100px;
+			background-color: pink;
+			transform: rotate(180deg); 
+        }
+		
+		#skew {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			transform: skewY(20deg);
+		}
+		
+		#scale {
+			width: 50px;
+			height: 50px;
+			background-color: pink;
+			transform: scaleY(1.5);
+		}
+
+        #noAnimate {
+            border: 3px solid black;
+        }
+
+
+		@keyframes slide {
+			0% {
+			left: 0;
+			top: 0;
+			}
+			50% {
+			left: 200px;
+			top: 50px;
+			}
+			100% {
+			left: 400px;
+			top: 0;
+			}
+		}
+		.stage {
+			background: pink;
+			border-radius: 3px;
+			height: 150px;
+			position: relative;
+			min-width: 50px;
+		}
+		.stage:hover .ball {
+			animation-name: slide;
+			animation-duration: 2s;
+			animation-timing-function: ease;
+			animation-delay: .5s;
+		}
+		.ball {
+			background: purple;
+			border-radius: 50%;
+			height: 50px;
+			position: absolute;
+			width: 50px;
+		}
+
+        
+    </style>
+</head>
+<body>
+<h2>Transitions</h2>
+
+<br><br>
+<h3>Transforms:</h3>
+
+<div id="noTransform">No transforms</div>
+<br>
+<br>
+<div id="rotate">Rotated</div>
+<br>
+<br>
+<div id="skew">Skewed</div>
+<br>
+<br>
+<div id="scale">Scaled</div>
+<br>
+<br>
+
+
+<br><br>
+<h2>Animations:</h2>
+
+<div class="stage">
+  <figure class="ball"></figure>
+</div>   
+    
+<br><br><br><br>
+
+<hr>
+        <a href="index.html">Topic List</a>
+    </body>
+</html>
